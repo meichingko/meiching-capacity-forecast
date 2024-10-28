@@ -1,0 +1,17 @@
+<div dndDropzone (dndDrop)="onDrop($event, waveFormListData)">
+	<div class=" dndPlaceholder" dndPlaceholderRef>
+	</div>
+
+
+<!--  
+	<div *ngFor = "let d of waveFormListData;"   >
+
+ 
+  [dndDraggable]="d.id" [dndEffectAllowed]="'move'" (dndMoved)="onDragged(d.id, waveFormListData, 'move')"
+		<highcharts-chart id="chart" [Highcharts]="Highcharts" [constructorType]="'stockChart'" [options]="d.options" (chartInstance)="d.chart=$event"
+		 [oneToOne]="true" [(update)]="updateFlag"></highcharts-chart> 
+	</div>
+  -->
+</div>
+
+<button (click)="update()">update</button>

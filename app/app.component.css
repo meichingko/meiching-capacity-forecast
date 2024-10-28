@@ -1,0 +1,15 @@
+.active {
+  color: orange;
+}
+
+body, html , my-app{
+  background-color: #34333b;
+  background: #34333b !important;
+}
+
+highcharts-chart {
+  width: 100% !important;
+  height: 50% !important;
+  margin: 0 auto;
+  display: fixed;
+}

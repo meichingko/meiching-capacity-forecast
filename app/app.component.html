@@ -1,0 +1,54 @@
+<!-- <select [(ngModel)]="selectedMonth" (change)="onMonthChange($event)">
+  <option *ngFor="let month of months" [value]="month.value">
+    {{ month.name }}
+  </option>
+</select>
+
+<div style="padding-top: 10px">
+  <pixie-highcharts
+    [type]="type"
+    [zoomType]="zoomType"
+    [data]="data"
+    [xAxis]="xAxis"
+    [yAxis]="yAxis"
+    [footer]="footer"
+    [colors]="color"
+    [tooltip]="tooltip"
+    [export]="exporting"
+    [config]="config"
+    (load)="onLoad($event)"
+  >
+  </pixie-highcharts>
+</div> -->
+
+<div class="forecast-container">
+  <h2>Equipment Capacity Forecast</h2>
+
+  <!-- Month Selector -->
+  <label for="monthSelector">Select Starting Month:</label>
+  <select
+    id="monthSelector"
+    [(ngModel)]="selectedMonth"
+    (change)="updateChart()"
+  >
+    <option *ngFor="let month of monthNames" [value]="month">
+      {{ month }}
+    </option>
+  </select>
+
+  <!-- Highcharts Visualization -->
+  <highcharts-chart
+    [Highcharts]="Highcharts"
+    [options]="chartOptions"
+    style="width: 100%; height: 400px; display: block;"
+  ></highcharts-chart>
+  <!-- 
+<ag-grid-angular
+	style="width: 100%; height: 400px;"
+	class="ag-theme-alpine"
+	[columnDefs]="columnDefs"
+	[rowData]="rowData"
+	[animateRows]="true"
+>
+</ag-grid-angular> -->
+</div>
